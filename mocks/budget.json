@@ -1,0 +1,12 @@
+{
+	"body": 
+		{
+		"budgetId": "Repairs & Maintenance",
+		"categoryId": "Transportation",
+		"budgetedAmount": 50.00,
+		"leftoverLastMonth": 23.00,
+		"currentBalance": 0.00,
+		"budgetCategoryIcon": "transportation.png",
+		"budgetItemIcon": "autorepairs.png"
+		}
+}

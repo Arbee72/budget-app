@@ -13,7 +13,57 @@ plugins:
 provider:
   name: aws
   runtime: nodejs10.x
-  stage: dev
+  stage: prod
   region: us-east-1
 
-    
+  environment:
+    tableName: Transactions
+
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:DescribeTable
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+      Resource: "arn:aws:dynamodb:us-east-1:*:*" 
+
+functions:
+  manual_entry:
+    handler: manual_entry.main
+    events:
+      - http:
+          path: manual_entry
+          method: post
+          cors: true
+          authorizer: aws_iam
+
+  create_budget:
+    handler: create_budget.main
+    events:
+      - http:
+          path: create_budget
+          method: post
+          cors: true
+          authorizer: aws_iam        
+
+  monthly_transactions:
+    handler: monthly_transactions.main
+    events:
+      - http:
+          path: transactions/{id}
+          method: get
+          cors: true
+          authorizer: aws_iam
+
+  update_transaction:
+    handler: update_transaction.main
+    event:
+      - http:
+        path: update_transaction/{id}
+        method: put
+        cors: true
+        authorizer: aws_iam

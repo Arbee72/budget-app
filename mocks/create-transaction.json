@@ -1,0 +1,22 @@
+{
+	"body": 
+	{
+		"yearMonth": 201909,
+		"transaction": {
+			"bank": "Chase Credit",
+			"cardNo": "1528",
+			"category": "Fuel",
+			"credit": 0,
+			"debit": 33.30,
+			"description": "Shell Oil Pump #2423",
+			"transactionDate": "2019-09-27",
+			"postedDate": "2019-09-28"
+			},
+		"budgetId": "Groceries",
+		"attachments":
+			[{
+				"docName": "Receipt",
+				"docLocation": "S3Bucketlink"
+			}]	
+	}
+}

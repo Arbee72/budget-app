@@ -1,0 +1,17 @@
+{
+	"body": 
+	{
+		"cardNo": "1550",
+		"category": "Merchandise",
+		"credit": "0",
+		"debit": "43.30",
+		"description": "KROGER #983",
+		"transactionDate": "2019-09-29",
+		"postedDate": "2019-09-30"
+		
+	},
+	"requestContext": 
+	{
+		"identity": {"cognitoIdentityId": "USER-SUB-1234"}
+	}
+}
