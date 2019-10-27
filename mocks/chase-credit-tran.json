@@ -1,0 +1,21 @@
+{
+	"body": 
+	{
+		"yearMonth": 201909,
+		"bank": "Chase Credit",
+		"transaction": {
+			"Transaction Date" : "9/19/2019",
+			"Post Date": "09/22/2019",
+			"Description": "RESIDENCE INN OKLAHOMA",
+			"Category": "Travel",
+			"Type": "Sale",
+			"Amount": -452.01
+			},
+		"attachments": []	
+	},
+	"requestContext": {
+		"identity": {
+			"cognitoIdentityId": "36479f00-c22f-461e-9715-6f794e6b58f0"
+			}
+		}
+}

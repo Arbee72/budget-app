@@ -1,0 +1,21 @@
+{
+	"body": 
+	{
+		"yearMonth": 201909,
+		"bank": "Chase Credit",
+		"transaction": {
+			"Transaction Date" : "9/18/2019",
+			"Post Date": "10/18/2019",
+			"Description": "Payment Thank You - Web",
+			"Category": " ",
+			"Type": "Payment",
+			"Amount": 40.44
+			},
+		"attachments": []	
+	},
+	"requestContext": {
+		"identity": {
+			"cognitoIdentityId": "36479f00-c22f-461e-9715-6f794e6b58f0"
+			}
+		}
+}

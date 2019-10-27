@@ -1,0 +1,18 @@
+95cfc7799a6590d6bb47489234ada880
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.calculateCost = calculateCost;
+
+function calculateCost(storage) {
+  var rate = storage <= 10 //if less than 10 notes stored
+  ? 4 // we charge them $4 per note
+  : storage <= 100 //if 11 to 100 notes stored
+  ? 2 // we charge them $2 per note
+  : 1; // more than 100 is $1 per note
+
+  return rate * storage * 100; //result must be in pennies, thus *100
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJpbGxpbmctbGliLmpzIl0sIm5hbWVzIjpbImNhbGN1bGF0ZUNvc3QiLCJzdG9yYWdlIiwicmF0ZSJdLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUFPLFNBQVNBLGFBQVQsQ0FBdUJDLE9BQXZCLEVBQWdDO0FBQ3RDLE1BQU1DLElBQUksR0FBR0QsT0FBTyxJQUFJLEVBQVgsQ0FBYztBQUFkLElBQ1YsQ0FEVSxDQUNSO0FBRFEsSUFFVkEsT0FBTyxJQUFJLEdBQVgsQ0FBZTtBQUFmLElBQ0EsQ0FEQSxDQUNFO0FBREYsSUFFQSxDQUpILENBRHNDLENBS2hDOztBQUNOLFNBQU9DLElBQUksR0FBR0QsT0FBUCxHQUFpQixHQUF4QixDQU5zQyxDQU1UO0FBQzdCIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGZ1bmN0aW9uIGNhbGN1bGF0ZUNvc3Qoc3RvcmFnZSkge1xuXHRjb25zdCByYXRlID0gc3RvcmFnZSA8PSAxMCAvL2lmIGxlc3MgdGhhbiAxMCBub3RlcyBzdG9yZWRcblx0XHQ/IDQgLy8gd2UgY2hhcmdlIHRoZW0gJDQgcGVyIG5vdGVcblx0XHQ6IHN0b3JhZ2UgPD0gMTAwIC8vaWYgMTEgdG8gMTAwIG5vdGVzIHN0b3JlZFxuXHRcdD8gMiAvLyB3ZSBjaGFyZ2UgdGhlbSAkMiBwZXIgbm90ZVxuXHRcdDogMTsgLy8gbW9yZSB0aGFuIDEwMCBpcyAkMSBwZXIgbm90ZVxuXHRyZXR1cm4gcmF0ZSAqIHN0b3JhZ2UgKiAxMDA7IC8vcmVzdWx0IG11c3QgYmUgaW4gcGVubmllcywgdGh1cyAqMTAwXG59Il19
