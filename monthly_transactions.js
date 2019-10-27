@@ -8,7 +8,7 @@ export async function main(event, context) {
 	Key: {
 		transactionId: event.pathParameters.id,
 		transactionDate: event.pathParameters.date,
-		//userId: event.requestContext.identity.cognitoIdentityId
+		userId: event.requestContext.identity.cognitoIdentityId
 		}
 	};
 

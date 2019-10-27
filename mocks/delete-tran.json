@@ -1,0 +1,11 @@
+{
+	"pathParameters": {
+		"transactionId": "c5f38310-f860-11e9-9d1a-89210616afcd",
+		"yearMonth": 201910
+		},
+	"requestContext": {
+		"identity": {
+			"cognitoIdentityId": "36479f00-c22f-461e-9715-6f794e6b58f0"
+			}
+		}
+}

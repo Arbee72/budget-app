@@ -8,5 +8,10 @@
 		"currentBalance": 0.00,
 		"budgetCategoryIcon": "transportation.png",
 		"budgetItemIcon": "autorepairs.png"
-		}
+		},
+	"requestContext": {
+		"identity": {
+			"cognitoIdentityId": "36479f00-c22f-461e-9715-6f794e6b58f0"
+			}
+		}	
 }

@@ -1,3 +1,5 @@
+org: robertbuna
+app: budget-app-app
 # NOTE: update this with your service name
 service: budget-app
 
@@ -18,6 +20,9 @@ provider:
 
   environment:
     tableName: Transactions
+    tableBudgetName: Budgets
+    tableLOName: Leftovers
+    stripeSecretKey: ${env:STRIPE_SECRET_KEY}
 
   iamRoleStatements:
     - Effect: Allow
@@ -59,11 +64,38 @@ functions:
           cors: true
           authorizer: aws_iam
 
-  update_transaction:
-    handler: update_transaction.main
+  assign_budget:
+    handler: assign_budget.main
     event:
       - http:
-        path: update_transaction/{id}
+        path: assign_budget/{transactionId}
         method: put
+        cors: true
+        authorizer: aws_iam
+
+  add_attachment:
+    handler: add_attachment.main
+    event:
+      - http:
+        path: add_attachment/{transactionId}
+        method: put
+        cors: true
+        authorizer: aws_iam      
+
+  delete_transaction:
+    handler: delete_transaction.main
+    events:
+      - http:
+        path: delete_transaction/{transactionId}
+        method: delete
+        cors: true
+        authorizer: aws_iam  
+
+  billing:
+    handler: billing.main
+    events:
+      - http:
+        path: billing
+        method: post
         cors: true
         authorizer: aws_iam

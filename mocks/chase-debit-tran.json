@@ -1,0 +1,22 @@
+{
+	"body": 
+	{
+		"yearMonth": 201910,
+		"bank": "Chase Debit",
+		"transaction": {
+			"Details": "CHECK",
+			"Posting Date": "10/21/2019",
+			"Description": "CHECK 1777",
+			"Amount": -100,
+			"Type": "CHECK_PAID",
+			"Balance": 3698.61,
+			"Check or Slip #": "1777"
+			},
+		"attachments": []	
+	},
+	"requestContext": {
+		"identity": {
+			"cognitoIdentityId": "36479f00-c22f-461e-9715-6f794e6b58f0"
+			}
+		}
+}

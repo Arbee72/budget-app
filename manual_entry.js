@@ -5,24 +5,17 @@ import { success, failure } from "./libs/response-lib";
 export async function main(event, context, callback) {
 
 	const data = event.body;
+	const tran = event.body.transaction;
 
 	const params = {
 		TableName: process.env.tableName,
 		Item: {
 			yearMonth: data.yearMonth,
 			transactionId: uuid.v1(),
+			bank: data.bank,
 			userId: event.requestContext.identity.cognitoIdentityId,
-			transaction:{
-				bank: data.transaction.bank,
-				cardNo: data.transaction.cardNo,
-				category: data.transaction.category,
-				credit: data.transaction.credit,
-				debit: data.transaction.debit,
-				description: data.transaction.description,
-				postedDate: data.transaction.postedDate,
-				transactionDate: data.transaction.transactionDate
-				},
-			budgetId: data.budgetId,
+			transaction: tran,
+			attachments: [],
 			createdAt: Date.now()
 			}
 		};

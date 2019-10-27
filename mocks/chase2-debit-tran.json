@@ -1,0 +1,22 @@
+{
+	"body": 
+	{
+		"yearMonth": 201910,
+		"bank": "Chase Debit",
+		"transaction": {
+			"Details": "CREDIT",
+			"Posting Date": "10/21/2019",
+			"Description": "QuickPay with Zelle payment from MEAGHAN WOLF 8770294221",
+			"Amount": 494.5,
+			"Type": "QUICKPAY_CREDIT",
+			"Balance": 3938.95,
+			"Check or Slip #": " "
+			},
+		"attachments": []	
+	},
+	"requestContext": {
+		"identity": {
+			"cognitoIdentityId": "36479f00-c22f-461e-9715-6f794e6b58f0"
+			}
+		}
+}

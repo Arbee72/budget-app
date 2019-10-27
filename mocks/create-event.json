@@ -10,8 +10,7 @@
 		"postedDate": "2019-09-30"
 		
 	},
-	"requestContext": 
-	{
+	"requestContext": {
 		"identity": {"cognitoIdentityId": "USER-SUB-1234"}
-	}
+		}
 }

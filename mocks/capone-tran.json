@@ -1,0 +1,22 @@
+{
+	"body": 
+	{
+		"yearMonth": 201910,
+		"bank": "Capital One",
+		"transaction": {
+			"Transaction Date" : "10/18/2019",
+			"Posted Date": "10/19/2019",
+			"Card No.": "1550",
+			"Description": "AMZN Mktp US*QK0EZ16B3",
+			"Category": "Merchandise",
+			"Debit": 67.57,
+			"Credit": 0
+			},
+		"attachments": []	
+	},
+	"requestContext": {
+		"identity": {
+			"cognitoIdentityId": "36479f00-c22f-461e-9715-6f794e6b58f0"
+			}
+		}
+}

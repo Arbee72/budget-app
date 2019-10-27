@@ -3,9 +3,9 @@
 	{
 		"yearMonth": 201909,
 		"transaction": {
-			"bank": "Chase Credit",
-			"cardNo": "1528",
-			"category": "Fuel",
+			"bank": "Chase Debit",
+			"cardNo": "1166",
+			"category": "Online Transaction",
 			"credit": 0,
 			"debit": 33.30,
 			"description": "Shell Oil Pump #2423",
@@ -18,5 +18,10 @@
 				"docName": "Receipt",
 				"docLocation": "S3Bucketlink"
 			}]	
-	}
+	},
+	"requestContext": {
+		"identity": {
+			"cognitoIdentityId": "36479f00-c22f-461e-9715-6f794e6b58f0"
+			}
+		}
 }
