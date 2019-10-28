@@ -55,50 +55,59 @@ functions:
           cors: true
           authorizer: aws_iam        
 
+  single_transaction:
+    handler: single_transaction.main
+    events:
+      - http:
+          path: single_transaction/{transactionId}
+          method: get
+          cors: true
+          authorizer: aws_iam
+
   monthly_transactions:
     handler: monthly_transactions.main
     events:
       - http:
-          path: transactions/{id}
+          path: monthly_transactions/{yearMonth}
           method: get
           cors: true
-          authorizer: aws_iam
+          authorizer: aws_iam        
 
   assign_budget:
     handler: assign_budget.main
     event:
       - http:
-        path: assign_budget/{transactionId}
-        method: put
-        cors: true
-        authorizer: aws_iam
+          path: assign_budget/{transactionId}
+          method: put
+          cors: true
+          authorizer: aws_iam
 
   add_attachment:
     handler: add_attachment.main
     event:
       - http:
-        path: add_attachment/{transactionId}
-        method: put
-        cors: true
-        authorizer: aws_iam      
+          path: add_attachment/{transactionId}
+          method: put
+          cors: true
+          authorizer: aws_iam      
 
   delete_transaction:
     handler: delete_transaction.main
     events:
       - http:
-        path: delete_transaction/{transactionId}
-        method: delete
-        cors: true
-        authorizer: aws_iam  
+          path: delete_transaction/{transactionId}
+          method: delete
+          cors: true
+          authorizer: aws_iam  
 
   billing:
     handler: billing.main
     events:
       - http:
-        path: billing
-        method: post
-        cors: true
-        authorizer: aws_iam
+          path: billing
+          method: post
+          cors: true
+          authorizer: aws_iam
 # Create our resources with separate CloudFormation templates
 resources:
   # API Gateway Errors
